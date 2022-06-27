@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        let arr = Array(7);
+        let arr1 = Array.of(4);
+        console.log(arr);
+        arr[0] = 0;
+        console.log(arr);
+        console.log(arr1);
+        
+        let arr3 = Array.of(1,2,3,4,5,6,7,8,9,10)
+        arr3.map((valorAtual, index, lista) => {
+            console.log('index: ', index)
+            console.log('valor: ', valorAtual)
+
+            console.log(lista[index] - 1)
+            lista[index] = lista[index] - 1
+            console.log(lista)
+
+            return lista
+        })
+        console.log(arr3)
+        */
+       
+        
+        let num = [];
+        let tentativas = 0;
+        let somaTentativas = 0;
+        let listas = 0;
+        let resp = 'y';
+        let media = 0;
+
+        while(resp == 'y'){
+            tentativas = 0;
+            num = [];
+
+            while(num.length < 10){
+                let a = Math.floor(Math.random() * 10);
+                
+                if(!num.includes(a)){
+                    num.push(a);
+                }
+
+                tentativas++;
+            }
+
+            somaTentativas += tentativas;
+            listas++;
+
+            media = somaTentativas/listas;
+
+            console.log(num.sort(), 'tentativas: ', tentativas, '/// média:', media.toFixed(2));
+
+            resp = window.prompt('deseja continuar? y/n');
+        }
+
+        
+    </script>
+</body>
+</html>

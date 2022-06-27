@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OO Abstração</title>
+
+        <script>
+            class Sofa {
+                constructor(qtd_lugares, reclinavel, cor) {
+                    this.qtd_lugares = qtd_lugares;
+                    this.reclinavel = reclinavel;
+                    this.cor = cor;
+                }
+
+                reclinarSofa() {
+                    if(this.reclinavel === true) {
+                        console.log('reclinou');
+                    } else {
+                        console.log('sofá não é reclinável')
+                    }
+                }
+            }
+
+            let sofas = []
+            sofas.push(new Sofa(4, true, 'marrom'));
+            sofas.push(new Sofa(2, false, "azul"));
+
+            console.log(sofas);
+
+            let s1 = sofas[0];
+            let s2 = sofas[1];
+            s1.reclinarSofa();
+            s2.reclinarSofa();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

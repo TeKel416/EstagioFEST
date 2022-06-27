@@ -1,0 +1,17 @@
+<html lang="pt-br">
+    <head>
+        <script>
+            let i = 0;
+            function somar(){
+                i++;
+                document.getElementById('count').innerHTML = i;
+            }
+        </script>
+    </head>
+    <body style="display: flex; align-items: center; justify-content: center;">
+        <div>
+            <button style="background-color: lightblue;" type="button" onclick="somar()">Increment</button>
+            <p>Count: <span id="count"></span><p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array</title>
+
+        <script>
+            var lista_objetos = ['Cadeira', 'Impressora', 'Garfo']
+
+            function verificaValor() {
+                //pega o texto do input
+                var texto = document.getElementById('input').value
+
+                //verifica se o texto está vazio
+                if (texto === '') {
+                    alert('Informe um valor válido')
+                } 
+                
+                else {
+                    //verifica se o texto já existe no array
+                    if (lista_objetos.indexOf(texto) > -1) {
+                        alert('Objeto já foi adicionado')
+                    } 
+                    
+                    //adiciona o texto no array e limpa o campo do input
+                    else {
+                        lista_objetos.push(texto)
+                        console.log(lista_objetos)
+
+                        document.getElementById('input').value = ''
+                    }
+                }
+            }
+
+            function ordenaLista() {
+                lista_objetos.sort()
+                console.log(lista_objetos)
+            }
+        </script>
+    </head>
+
+    <body>
+        <input id="input" type="text">
+        <button id="add" onclick="verificaValor()">Adicionar</button>
+        <button id="ord" onclick="ordenaLista()">Ordenar</button>
+    </body>
+</html>

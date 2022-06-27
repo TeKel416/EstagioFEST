@@ -1,0 +1,11 @@
+#caixa {
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+}
+
+#caixa:hover {
+    width: 400px;
+    background-color: coral;
+    transition: all 2s;
+}

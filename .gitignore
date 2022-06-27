@@ -1,0 +1,14 @@
+# Arquivos e pastas que devem ser ignorados
+
+*.zip
+*.rar
+*.exe
+
+*.conf
+*.ini
+
+zzDownloads/
+
+usbwebserver/
+
+IONIC/

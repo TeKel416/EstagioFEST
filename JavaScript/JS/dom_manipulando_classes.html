@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <style>
+            .red {
+                color: red;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .blue {
+                color: blue;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            .green {
+                color: green;
+                font-family: 'Comic Sans MS';
+            }
+        </style>
+
+        <script>
+            function modificaClasse(classe) {
+                document.getElementById('div').className = classe
+            }
+        </script>
+    </head>
+
+    <body>
+        <h3>Manipulando classes</h3>
+        
+        <button onclick="modificaClasse('red')" type="button">Red</button>
+        <button onclick="modificaClasse('blue')" type="button">Blue</button>
+        <button onclick="modificaClasse('green')" type="button">Green</button>
+
+        <hr>
+
+        <div id="div"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime amet minima quisquam blanditiis deleniti laudantium libero ad placeat voluptate labore a animi obcaecati velit cumque nesciunt sit, nostrum magnam deserunt!</p></div>
+    </body>
+</html>

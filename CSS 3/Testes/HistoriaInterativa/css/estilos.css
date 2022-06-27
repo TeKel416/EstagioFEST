@@ -1,0 +1,103 @@
+/* Limpar formatções padrão */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Fonte personalizada */
+@font-face {
+    font-family: "Aldo";
+    src: url("../fonts/AldotheApache.woff");
+}
+
+
+/* Formatações gerais */
+body, header {
+    font-family: "Aldo", "Helvetica", monospace;
+    background-color: #555;
+}
+
+p {
+    margin: 5px;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+
+/* Cabeçalho */
+header {
+    text-align: left center;
+    color: #fff;
+}
+
+/* Layout */
+#container {
+    width: 960px;
+    margin: 10px auto;
+    background-color: #fff;
+}
+
+#principal {
+    border: 2px solid #000;
+}
+
+.textbox, .choices {
+    border: 1px solid #333;
+}
+
+
+/* Textbox */
+.textbox {
+    padding: 10px;
+    text-align: justify;
+    font-size: 2em;
+}
+
+
+/* Escolhas */
+.choices {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.choices ul {
+    list-style: none;
+}
+
+.choices ul li {
+    margin: 5px;
+    border: 1px solid #333;
+}
+
+.choices ul li a {
+    text-decoration: none;
+    color: #222;
+    padding: 3px;
+    display: block;
+}
+
+.choices a:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #f3f3f3;
+    text-align: center;
+    margin-top: 20px;
+    height: 30px;
+}
+
+footer div {
+    padding: 7px;
+}

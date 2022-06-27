@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <script>
+            function modificaEstilo(cor) {
+                document.getElementById('div').style.background = cor
+            }
+
+            function modificaWidth(w) {
+                document.getElementById('div').style.width = w
+            }
+
+            function modificaHeight(h) {
+                document.getElementById('div').style.height = h
+            }
+        </script>
+    </head>
+
+    <body>
+        <h3>Manipulando estilo</h3>
+        
+        <button onclick="modificaEstilo('red')" type="button">Red</button>
+        <button onclick="modificaEstilo('blue')" type="button">Blue</button>
+        <button onclick="modificaEstilo('green')" type="button">Green</button>
+
+        <button onclick="modificaWidth('200px')" type="button">+W</button>
+        <button onclick="modificaHeight('200px')" type="button">+H</button>
+
+        <hr>
+
+        <div id="div" style="border: 1px solid black; width: 100px; height: 100px;"></div>
+    </body>
+</html>

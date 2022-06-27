@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Switch</title>
+    </head>
+    <body>
+        <h1>Menu:</h1>
+        <ol>
+            <li>H1</li>
+            <li>H2</li>
+            <li>H3</li>
+        </ol>
+        <hr>
+
+        <script>
+            var opcao = prompt('Bem-vindo! O que vai ser?')
+
+            switch(opcao) {
+
+                case '1':
+                    document.write("<h1>Header</h1>")
+                    break
+                
+                case '2':
+                    document.write("<h2>Header</h2>")
+                    break
+
+                case '3':
+                    document.write("<h3>Header</h3>")
+                    break
+                
+                default:
+                    document.write("<p>Header</p>")
+            }
+        </script>
+        
+    </body>
+</html>

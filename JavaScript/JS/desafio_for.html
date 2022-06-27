@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>For e While</title>
+
+        <script>
+            /*1*/
+            var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva']
+
+            for(var x in lista_frutas){
+                document.write(lista_frutas[x] + '<br>')
+            }
+
+            document.write('<hr>')
+
+            /*2*/
+            var x = 1
+            var y = 1
+
+            while(y <= 10){
+                document.write(x + ' x ' + y + ' = '  + x*y + '<br>')
+                y++
+
+                if(y > 10){
+                    y = 1
+                    x++
+                    document.write('<br><br>')
+                }
+
+                if(x > 10) {
+                    break
+                } 
+            }
+
+            document.write('<hr>')
+
+            var lista_frutas = Array();
+            lista_frutas[0] = 'Banana';
+            lista_frutas[1] = 'Maçã';
+            lista_frutas[2] = 'Morango';
+            lista_frutas[3] = 'Uva';
+
+            for (var i = 0; i < lista_frutas.length; i++) {
+                document.write(lista_frutas[i] + '<br>');
+                console.log(lista_frutas[i])
+            }
+            
+            document.write('<hr>')
+
+            var x = 1;
+            var y = 1;
+            while (x <= 10) {
+                y = 1;
+                while (y <= 10) {
+                    console.log(x + ' x ' + y + ' = ' + x * y);
+                    document.write(x + ' x ' + y + ' = ' + x * y + '<br>');
+                    y++;
+                }
+                console.log("\n");
+                document.write("<hr/>");
+                x++;
+            }
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>

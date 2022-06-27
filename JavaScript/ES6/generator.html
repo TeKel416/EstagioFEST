@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            let conversa = conversar()
+            
+            function* conversar(){
+                let opcao = yield 'E aí tudo bem?'
+
+                if (opcao == 'sim') {
+                    yield 'Ótimo, fico feliz!'
+
+                    opcao = yield 'Como eu posso te ajudar? Quer uma piada?'
+
+                    if(opcao == 'sim'){
+
+                        fetch('dados/piadas.json')
+                            .then(resposta => resposta.json())
+                            .then(piadas => {
+                                let piada = piadas[Math.floor(Math.random() * 10)];
+
+                                console.log(piada.piada)
+                                
+                                setTimeout(()=>{
+                                    console.log(piada.resposta)
+                                    console.log('kkkkkkkkkkkk perdi com essa')
+                                }, 5000)
+                            })
+
+                            yield 'Digite 1 para compras, 2 para vendas ou 3 para falar com um atendente'
+
+                    }else{
+                        yield 'Digite 1 para compras, 2 para vendas ou 3 para falar com um atendente'
+                    }
+
+                //--------------------
+                }else {
+                    yield 'Sinto muito :('
+
+                    yield 'Digite 1 para compras, 2 para vendas ou 3 para falar com um atendente'
+                }
+
+                return 'cabou'
+                
+            }
+
+
+            function acao(){
+                let resposta = document.getElementById('resposta').value;
+
+                let iteracao = conversa.next(resposta)
+                console.log(iteracao)
+
+                if(iteracao.done) {
+                    document.getElementById('teste').style.display = 'none';
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="teste">
+            <button onclick="acao()">Avançar</button>   
+            Resposta: <input type="text" id="resposta">
+        </div>
+    </body>
+</html>

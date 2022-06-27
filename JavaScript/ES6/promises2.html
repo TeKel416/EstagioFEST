@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        
+        <script>
+            
+            let promessa = new Promise((resolve, reject)=>{
+                /*
+                try {
+
+                } catch(e) {
+
+                }*/
+
+                //requisição http para recuperar uma relação de usuários
+                setTimeout(()=>{
+                    //requisição foi realizada de algum modo (uma em várias formas)
+                    let respostaRequisicao = {}
+
+
+                    //erro na requisição
+                    if(!true){
+                        respostaRequisicao = {
+                            codigo: 1050,
+                            erro: 'Falhou aqui, mané'
+                        }
+
+                        reject(respostaRequisicao)
+                    }
+
+
+                    respostaRequisicao = {
+                        0: { id: 1, nome: 'Jã1' },
+                        1: { id: 2, nome: 'Naruto' },
+                        2: { id: 3, nome: 'Sasuke' }
+                    }
+
+                    resolve(respostaRequisicao)
+
+                }, 4000)
+
+            }).then(dados => {
+                let retorno = 153;
+                console.log('Toma: ', dados)
+
+                return retorno;
+
+            }).then(then1 => {
+                console.log(then1, ' do then 2')
+
+                return then1 + 1;
+
+            }).then(resultado => {
+                console.log(resultado, ' do then 3')
+
+                return resultado + 1;
+
+            }).catch(erro =>{
+                console.log('errou :( ', erro)
+
+                setTimeout(() => {
+                    console.log('é pegadinha, olha a câmera lá kkkkkkk')
+                    
+                    document.body.innerHTML = '<img src="https://c.mlcdn.com.br/800x600/portaldalu/fotosconteudo/87166.jpg">'
+
+                }, 2000)
+
+                return erro;
+            
+            }).then(param => {
+                console.log('then depois do catch ', param)
+            })
+        </script>
+
+    </body>
+</html>

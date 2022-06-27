@@ -1,0 +1,28 @@
+@keyframes animacao-caixa {
+    from {
+        background: palegreen;
+        border-radius: 0px;
+        top: 0;
+        left: 0;
+    }
+    to {
+        background: paleturquoise;
+        border-radius: 300px;
+        top: 200px;
+        left: 200px;
+    }
+}
+
+#caixa {
+    width: 300px;
+    height: 300px;
+    background: palevioletred;
+    position: relative;
+    /*animation-name: animacao-caixa;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+
+    animation: animacao-caixa 5s 3s 3 alternate;
+}
