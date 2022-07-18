@@ -8,6 +8,9 @@
     <title>Menu</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -16,21 +19,42 @@
     <div class="base">
         <h1>Quadrados Coloridos</h1>
         <div class="col-center-dificuldade">
-            <label class="texto-dificuldade" for="dificuldade">Escolha a dificuldade:</label><br/>
 
-            <select id="dificuldade" class="dificuldade" name="dificuldade">
-                <option name="dificuldade" value="">--Selecione uma opção--</option>
-                <option name="dificuldade" value="facil">Fácil</option>
-                <option name="dificuldade" value="medio">Médio</option>
-                <option name="dificuldade" value="dificil">Difícil</option>
-            </select>
+            <form id="form" name="form" action="game.html" method="get" onsubmit="return validateForm()">
+                <div>
+                    <label class="texto-dificuldade" for="dificuldade">Escolha a dificuldade:</label><br/>
 
-            <button id="jogar" type="button" onclick="iniciar()">Jogar!</button>
-            <a href="#">Como jogar</a>
+                    <div class="inputs-da-duda">
+                        <input class="radio-input" type="radio" id="facil" name="dificuldade" value="facil">
+                        <label class="radio-label" for="facil">Fácil</label>
+
+                        <input class="radio-input" type="radio" id="medio" name="dificuldade" value="medio">
+                        <label class="radio-label" for="medio">Médio</label>
+
+                        <input class="radio-input" type="radio" id="dificil" name="dificuldade" value="dificil">
+                        <label class="radio-label" for="dificil">Difícil</label>
+                    </div>
+                </div>
+                <div>
+                    <button id="jogar" type="submit">Jogar!</button>
+                </div>
+                <details>
+                    <summary>
+                        Como jogar <i class="fa fa-circle-chevron-down"></i>
+                    </summary>
+                    <hr>
+                    <div class="texto-como">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div> 
+                </details>
+            </form>
         </div>
     </div>
 
     
     <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/a9ac96b7ba.js"
+      crossorigin="anonymous"></script>
+
 </body>
 </html>
