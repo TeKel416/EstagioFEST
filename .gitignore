@@ -4,9 +4,6 @@
 *.rar
 *.exe
 
-*.conf
-*.ini
-
 zzDownloads/
 
 usbwebserver/

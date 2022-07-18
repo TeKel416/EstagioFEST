@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jogo</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/script.js"></script>
+    <title>Menu</title>
 
-        <link rel="stylesheet" href="css/estilo.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
-    <body>
-        <div id="titulo">
-            <h3>Clique nos quadrados coloridos conforme eles aparecem!</h3>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body class="col-center">
+    <div class="base">
+        <h1>Quadrados Coloridos</h1>
+        <div class="col-center-dificuldade">
+            <label class="texto-dificuldade" for="dificuldade">Escolha a dificuldade:</label><br/>
+
+            <select id="dificuldade" class="dificuldade" name="dificuldade">
+                <option name="dificuldade" value="">--Selecione uma opção--</option>
+                <option name="dificuldade" value="facil">Fácil</option>
+                <option name="dificuldade" value="medio">Médio</option>
+                <option name="dificuldade" value="dificil">Difícil</option>
+            </select>
+
+            <button id="jogar" type="button" onclick="iniciar()">Jogar!</button>
+            <a href="#">Como jogar</a>
         </div>
+    </div>
 
-            <button type="button" id="iniciar">Iniciar!</button>
-
-        <div id="areajogo">
-        </div>
+    
+    <script src="js/script.js"></script>
+</body>
 </html>
