@@ -1,3 +1,17 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+table td {
+    height: 4.5em;
+    width: 4.5em;
+}
+
+.clicado {
+    background-color: aqua;
+}
+
 body {
     font-family: 'Radio Canada', sans-serif;
     text-align: center;
@@ -59,6 +73,13 @@ body {
 #aviso {
     font-size: 14.5px;
     color: brown;
+}
+
+#venceu {
+    font-size: 30px;
+    font-weight: 700;
+    color: darkgoldenrod;
+    margin: 8% 0;
 }
 
 .col-center {
